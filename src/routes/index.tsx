@@ -258,8 +258,8 @@ function NewVsUsed() {
         {data.map(([t], k) => <button key={t} onClick={() => setI(k)} className={`min-h-11 shrink-0 rounded-full px-5 text-sm font-bold transition ${i === k ? "bg-ink text-background" : "bg-surface text-ink/70"}`}>{t}</button>)}
       </div>
       <div className="mt-6 grid gap-4 md:grid-cols-2">
-        <div className="rounded-3xl border border-border p-8"><p className="eyebrow text-ink/50">Auto nuevo</p><p className="mt-4 text-2xl font-bold text-ink">{data[i][1]}</p></div>
-        <div className="rounded-3xl border-2 border-brand p-8"><p className="eyebrow text-brand">Auto seminuevo</p><p className="mt-4 text-2xl font-bold text-ink">{data[i][2]}</p></div>
+        <div className="rounded-3xl border border-border p-8"><p className="eyebrow text-ink/50">Auto nuevo</p><p className="mt-4 text-2xl font-bold text-ink">{data[i]![1]}</p></div>
+        <div className="rounded-3xl border-2 border-brand p-8"><p className="eyebrow text-brand">Auto seminuevo</p><p className="mt-4 text-2xl font-bold text-ink">{data[i]![2]}</p></div>
       </div>
       <p className="mt-10 max-w-3xl text-2xl font-extrabold tracking-tight text-ink md:text-3xl">Lo importante no es solo si es nuevo o seminuevo, sino entender las condiciones completas.</p>
     </Section>
@@ -433,7 +433,7 @@ function Inventory() {
           {filters.map((f) => <button key={f} onClick={() => setAct(act === f ? null : f)} className={`min-h-11 shrink-0 rounded-full border px-5 text-sm font-bold transition ${act === f ? "border-brand bg-brand" : "border-background/25 hover:border-background"}`}>{f} ▾</button>)}
         </div>
         <div className="mt-8 grid gap-4 lg:grid-cols-2">
-          <CarCard c={lead} big />
+          <CarCard c={lead!} big />
           <div className="grid gap-4 sm:grid-cols-2">{rest.map((c) => <CarCard key={c.modelo} c={c} />)}</div>
         </div>
         <div className="mt-10 text-center"><a href="#" className={`${btn} bg-background text-ink`}>Ver todos los autos</a></div>
