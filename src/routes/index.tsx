@@ -144,7 +144,7 @@ function Hero() {
 }
 
 function Basics() {
-  const steps = ["Precio del auto", "Pago inicial", "Monto a financiar", "Pagos durante un plazo"];
+  const steps = ["Precio del auto", "Pago inicial", "Monto a financiar", "Pagos durante un plazo"] as const;
   return (
     <Section id="basico" eyebrow="¿Qué significa?" title="Empecemos por lo básico">
       <p className="max-w-2xl text-lg text-ink/70">Financiar un auto seminuevo significa adquirir un vehículo usado sin pagar todo su precio de una sola vez, utilizando una opción de pago ofrecida por una institución, dealer o agencia.</p>
