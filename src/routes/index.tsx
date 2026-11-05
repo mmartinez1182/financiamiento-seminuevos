@@ -275,9 +275,8 @@ function Scenario() {
   const rest = price * (1 - down / 100);
   const touch = () => track("used_financing_scenario_interaction");
   return (
-    <Section eyebrow="Explorador de escenarios" title="Explora cómo puede cambiar un plan" tone="bg-ink">
-      <div className="-mt-[5.5rem] mb-10" />
-      <div className="grid gap-6 rounded-3xl bg-card p-6 md:grid-cols-2 md:p-10">
+    <Section eyebrow="Explorador de escenarios" title="Explora cómo puede cambiar un plan" tone="bg-surface">
+      <div className="grid gap-6 rounded-3xl bg-card shadow-soft p-6 md:grid-cols-2 md:p-10">
         <div className="space-y-8">
           <div>
             <div className="flex justify-between text-sm font-bold text-ink"><span>Precio del auto</span><span>{mxn(price)}</span></div>
